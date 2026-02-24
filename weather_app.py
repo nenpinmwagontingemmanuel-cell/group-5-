@@ -37,7 +37,7 @@ label_encoder = joblib.load('label_encoder.joblib')
 
 # NOTE: This part is a workaround. In a production scenario, you MUST save the `StandardScaler` object
 # during training and load it here to ensure correct scaling of new inputs.
-original_df = pd.read_csv('/content/seattle-weather.csv')
+original_df = pd.read_csv('seattle-weather.csv')
 continuous_features_list = ['precipitation', 'temp_max', 'temp_min', 'wind']
 from sklearn.preprocessing import StandardScaler
 mock_scaler = StandardScaler()
